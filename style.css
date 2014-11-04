@@ -1,0 +1,13 @@
+body{
+  background-color: #39CCCC;
+
+}
+
+div{
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 10px;
+  background-color: #3D9970;
+  color: white;
+}
