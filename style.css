@@ -1,13 +1,24 @@
 body{
-  background-color: #39CCCC;
+  background-color: #A77CE8;
 
 }
 
-div{
+.manipulated{
   display: inline-block;
   border: 1px solid white;
   padding: 10px;
   margin: 10px;
   background-color: #3D9970;
   color: white;
+  width: 10%;
+  text-align: center;
+}
+
+h1, h3{
+  color: white;
+  text-align: center;
+}
+
+.row{
+  text-align: center;
 }

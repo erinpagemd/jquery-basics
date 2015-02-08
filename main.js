@@ -1,23 +1,30 @@
 $(document).ready(initialize);
 
 function initialize(){
-  $('#action').click(doStuff);
-  $('#change').click(otherStuff);
-  $('#add').click(addStuff);
+  $('#addText').click(addText);
+  $('#changeColor').click(changeColor);
+  $('#addSum').click(addSum);
 }
 
-function doStuff(){
-  var data = $('#data').val();
-  $('#a').text(data);
+//add entered text to "a" div
+function addText(event){
+  event.preventDefault();
+  var word = $('#word').val();
+  $('#a').text(word);
+  $('#word').val(" ");
 }
 
-function otherStuff(){
-  var color = $('#raw').val();
+//use entered text to change css color property of "b" div
+function changeColor(event){
+  event.preventDefault();
+  var color = $('#rawColor').val();
   $('#b').css('background-color', color);
-
+  $('#rawColor').val(" ");
 }
 
-function addStuff(){
+//convert 2 entered number separated by a + into a sum and append to "c" div
+function addSum(event){
+  event.preventDefault();
   var numbers = $('#numbers').val();
   numbers = numbers.split('+').map(Number);
 
@@ -27,6 +34,5 @@ function addStuff(){
   var answer = x + y;
   $('#c').text(answer);
 
-
-
+  $('#numbers').val(" ");
 }
