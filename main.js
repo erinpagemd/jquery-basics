@@ -1,23 +1,26 @@
 $(document).ready(initialize);
 
 function initialize(){
-  $('#action').click(doStuff);
+  $('#addText').click(addText);
   $('#change').click(otherStuff);
   $('#add').click(addStuff);
 }
 
-function doStuff(){
+//add entered text to "a" div
+function addText(event){
+  event.preventDefault();
   var data = $('#data').val();
   $('#a').text(data);
 }
 
-function otherStuff(){
+function otherStuff(event){
+  event.preventDefault();
   var color = $('#raw').val();
   $('#b').css('background-color', color);
-
 }
 
-function addStuff(){
+function addStuff(event){
+  event.preventDefault();
   var numbers = $('#numbers').val();
   numbers = numbers.split('+').map(Number);
 
@@ -26,7 +29,4 @@ function addStuff(){
 
   var answer = x + y;
   $('#c').text(answer);
-
-
-
 }
