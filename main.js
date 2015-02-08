@@ -11,6 +11,7 @@ function addText(event){
   event.preventDefault();
   var word = $('#word').val();
   $('#a').text(word);
+  $('#word').val(" ");
 }
 
 //use entered text to change css color property of "b" div
@@ -18,8 +19,10 @@ function changeColor(event){
   event.preventDefault();
   var color = $('#rawColor').val();
   $('#b').css('background-color', color);
+  $('#rawColor').val(" ");
 }
 
+//convert 2 entered number separated by a + into a sum and append to "c" div
 function addSum(event){
   event.preventDefault();
   var numbers = $('#numbers').val();
@@ -30,4 +33,6 @@ function addSum(event){
 
   var answer = x + y;
   $('#c').text(answer);
+
+  $('#numbers').val(" ");
 }

@@ -10,4 +10,15 @@ body{
   margin: 10px;
   background-color: #3D9970;
   color: white;
+  width: 10%;
+  text-align: center;
+}
+
+h1, h3{
+  color: white;
+  text-align: center;
+}
+
+.row{
+  text-align: center;
 }
