@@ -2,24 +2,25 @@ $(document).ready(initialize);
 
 function initialize(){
   $('#addText').click(addText);
-  $('#change').click(otherStuff);
-  $('#add').click(addStuff);
+  $('#changeColor').click(changeColor);
+  $('#addSum').click(addSum);
 }
 
 //add entered text to "a" div
 function addText(event){
   event.preventDefault();
-  var data = $('#data').val();
-  $('#a').text(data);
+  var word = $('#word').val();
+  $('#a').text(word);
 }
 
-function otherStuff(event){
+//use entered text to change css color property of "b" div
+function changeColor(event){
   event.preventDefault();
-  var color = $('#raw').val();
+  var color = $('#rawColor').val();
   $('#b').css('background-color', color);
 }
 
-function addStuff(event){
+function addSum(event){
   event.preventDefault();
   var numbers = $('#numbers').val();
   numbers = numbers.split('+').map(Number);

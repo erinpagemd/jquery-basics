@@ -1,9 +1,9 @@
 body{
-  background-color: #39CCCC;
+  background-color: #A77CE8;
 
 }
 
-div{
+.manipulated{
   display: inline-block;
   border: 1px solid white;
   padding: 10px;

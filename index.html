@@ -3,26 +3,37 @@
 <html>
 
   <head>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css'><!--Attach CDN for Skeleton-->
+    <link rel='stylesheet' href='style.css'>
     <title>Jquery Basics</title>
-    <link rel = 'stylesheet' href='style.css'>
-
   </head>
 
   <body>
     <h1>Jquery Basics</h1>
-    <div id='a'>A</div>
-    <div id='b'>B</div>
-    <div id='c'>C</div>
+    <div class='row'>
+      <div class='manipulated' id='a'>A</div>
+      <div class='manipulated' id='b'>B</div>
+      <div class='manipulated' id='c'>C</div>
+    </div>
 
     <form>
-      <input id='data' type = 'text'>
-      <button id='addText'>Add Text to A</button>
+      <div class='row'>
+        <label for='word'>Enter a word</label>
+        <input id='word' type = 'text'>
+        <button class='button-primary' id='addText'>Add Text to A</button>
+      </div>
 
-      <input id='raw' type = 'text'>
-      <button id='change'>Change Color</button>
+      <div class='row'>
+        <label for='rawColor'>Enter a color</label>
+        <input id='rawColor' type = 'text'>
+        <button class='button-primary' id='changeColor'>Change Color of B</button>
+      </div>
 
-      <input id='numbers' type = 'text'>
-      <button id='add'>Add to C</button>
+      <div class='row'>
+        <label for='numbers'>Enter numbers separated by +</label>
+        <input id='numbers' type = 'text'>
+        <button class='button-primary' id='addSum'>Add Sum to C</button>
+      </div>
     </form>
 
     <script src='jquery-2.1.1.js'></script>
