@@ -9,30 +9,38 @@ function initialize(){
 //add entered text to "a" div
 function addText(event){
   event.preventDefault();
-  var word = $('#word').val();
-  $('#a').text(word);
-  $('#word').val(" ");
+  $('#a').text(getValue(event));
 }
 
 //use entered text to change css color property of "b" div
 function changeColor(event){
   event.preventDefault();
-  var color = $('#rawColor').val();
-  $('#b').css('background-color', color);
-  $('#rawColor').val(" ");
+  $('#b').css('background-color', getValue(event));
 }
 
 //convert 2 entered number separated by a + into a sum and append to "c" div
 function addSum(event){
   event.preventDefault();
-  var numbers = $('#numbers').val();
-  numbers = numbers.split('+').map(Number);
+  $('#c').text(addNumbers(getValue(event)));
+}
 
+//take a string, turn it into an array of 2 numbers, add the 2 numbers together
+function addNumbers(string){
+  var numbers = string.split('+').map(Number);
   var x = numbers[0];
   var y = numbers[1];
-
   var answer = x + y;
-  $('#c').text(answer);
+  return answer;
+}
 
-  $('#numbers').val(" ");
+//gets the value of the input field that is the only input sibling of the event target
+function getValue(event){
+  //get the id of the input that is the sibling of the event target
+  var $inputID = $(event.target).siblings('input').attr('id');
+  //use the id to get the value of input field
+  var $inputContent = $('#' + $inputID).val();
+  //clear the input field
+  $('#' + $inputID).val(" ");
+  //return the id of the input field
+  return $inputContent;
 }

@@ -1,7 +1,9 @@
 # jquery-basics
 
-### Use of jquery to manipulate DOM and CSS
+### jquery to manipulate DOM and CSS
 
-### Addition of Skeleton CSS Framework
+### Skeleton CSS Framework
+
+### Functional javascript programming style 
 
 ##### Next step: add a test suite
